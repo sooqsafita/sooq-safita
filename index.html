@@ -12,11 +12,14 @@
     
     <style>
         :root {
-            --primary-color: #1e3a8a; /* الأزرق الملكي المعتمد للتطبيق */
-            --accent-color: #2563eb;
-            --text-dark: #1f2937;
-            --text-light: #4b5563;
-            --bg-light: #f8fafc;
+            --primary-color: #4caf7d;   /* الأخضر الرئيسي من التطبيق */
+            --accent-color: #3d9970;    /* الأخضر الداكن للتفاصيل */
+            --text-dark: #ffffff;
+            --text-light: #a0a8b4;
+            --bg-main: #121212;         /* الخلفية الداكنة الرئيسية */
+            --bg-card: #1e1e1e;         /* لون البطاقات */
+            --bg-card2: #252525;        /* بطاقات ثانوية */
+            --border-color: #2a2a2a;
             --white: #ffffff;
         }
 
@@ -28,20 +31,21 @@
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--bg-main);
             color: var(--text-dark);
             line-height: 1.6;
         }
 
         /* الهيدر وقسم البطل (Hero Section) */
         .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            background: linear-gradient(160deg, #1a2e22 0%, #121212 60%, #0d1f17 100%);
             color: var(--white);
             padding: 80px 20px;
             text-align: center;
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border-bottom: 1px solid #2a3d2e;
         }
 
         .logo-area {
@@ -55,18 +59,19 @@
         }
 
         .logo-area i {
-            color: #60a5fa;
+            color: var(--primary-color);
         }
 
         .hero h1 {
             font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 15px;
+            color: #ffffff;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #cbd5e1;
+            color: #8a9ba2;
             max-width: 600px;
             margin: 0 auto 35px auto;
         }
@@ -76,20 +81,20 @@
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #4caf7d 0%, #3d9970 100%);
             color: var(--white);
             padding: 16px 35px;
             border-radius: 50px;
             font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 4px 25px rgba(76, 175, 125, 0.35);
             transition: all 0.3s ease;
         }
 
         .download-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.6);
+            box-shadow: 0 8px 30px rgba(76, 175, 125, 0.55);
         }
 
         .download-btn i {
@@ -100,7 +105,7 @@
             display: block;
             margin-top: 10px;
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #5a6a70;
         }
 
         /* قسم ميزات التطبيق */
@@ -115,7 +120,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 40px;
-            color: var(--primary-color);
+            color: var(--white);
             position: relative;
         }
 
@@ -124,7 +129,7 @@
             display: block;
             width: 60px;
             height: 4px;
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             margin: 10px auto 0 auto;
             border-radius: 2px;
         }
@@ -136,37 +141,40 @@
         }
 
         .feature-card {
-            background-color: var(--white);
+            background-color: var(--bg-card);
             padding: 30px 20px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease;
-            border: 1px solid #f1f5f9;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            border-color: #3d9970;
         }
 
         .feature-icon {
             width: 60px;
             height: 60px;
-            background-color: #eff6ff;
-            color: var(--accent-color);
+            background-color: #1a2e22;
+            color: var(--primary-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.6rem;
             margin: 0 auto 20px auto;
+            border: 1px solid #2a3d2e;
         }
 
         .feature-card h3 {
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 12px;
-            color: var(--text-dark);
+            color: var(--white);
         }
 
         .feature-card p {
@@ -176,9 +184,11 @@
 
         /* قسم قنوات التواصل الاجتماعي والدعم */
         .channels {
-            background-color: #f1f5f9;
+            background-color: #181818;
             padding: 50px 20px;
             text-align: center;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .channels-container {
@@ -209,11 +219,12 @@
             color: var(--white);
             font-weight: 700;
             font-size: 1rem;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.2s ease;
         }
 
         .social-btn:hover {
             opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         .whatsapp-btn { background-color: #25d366; }
@@ -222,15 +233,16 @@
 
         /* الفوتر */
         footer {
-            background-color: #0f172a;
-            color: #94a3b8;
+            background-color: #0d0d0d;
+            color: #5a6a70;
             text-align: center;
             padding: 25px 20px;
             font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
         }
 
         footer p span {
-            color: var(--white);
+            color: var(--primary-color);
             font-weight: 700;
         }
     </style>
