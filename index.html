@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق صافيتا - تطبيق الإعلانات 
+ الأول</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a; /* الأزرق الملكي المعتمد للتطبيق */
+            --accent-color: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* الهيدر وقسم البطل (Hero Section) */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .logo-area {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo-area i {
+            color: #60a5fa;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+        }
+
+        /* زر التحميل الاحترافي */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: var(--white);
+            padding: 16px 35px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.6);
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        .version-text {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* قسم ميزات التطبيق */
+        .features {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1xl));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #eff6ff;
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 20px auto;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* قسم قنوات التواصل الاجتماعي والدعم */
+        .channels {
+            background-color: #f1f5f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .channels-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .channels p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-btn:hover {
+            opacity: 0.9;
+        }
+
+        .whatsapp-btn { background-color: #25d366; }
+        .facebook-btn { background-color: #1877f2; }
+        .instagram-btn { background-color: #e1306c; }
+
+        /* الفوتر */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p span {
+            color: var(--white);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="logo-area">
+            <i class="fa-solid fa-shop"></i>
+            <span>سوق صافيتا</span>
+        </div>
+        <h1>منصتك الأولى للبيع، الشراء، والخدمات</h1>
+        <p>اكتشف آلاف الإعلانات  في صافيتا ومحيطها: سيارات، موبايلات، لابتوبات، عقارات، دراجات نارية، وأقسام متطورة لشحن الألعاب والتطبيقات والدردشة الفورية الآمنة.</p>
+        
+        <a href="ضع_رابط_الـ_APK_المباشر_من_الريليس_هنا" class="download-btn" download>
+            <i class="fa-solid fa-download"></i>
+            <span>تحميل التطبيق مباشر (APK)</span>
+        </a>
+        <span class="version-text">الإصدار المستقر الأخير v1.0.0 • آمن 100%</span>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">لماذا تطبيق سوق صافيتا?</h2>
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>فئات متنوعة ومتكاملة</h3>
+                <p>تصفح وانشر إعلاناتك ضمن تصنيفات مخصصة كاللابتوبات بمواصفاتها الدقيقة، العقارات، والأشغال اليدوية التراثية.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+                <h3>دردشة فورية موثقة</h3>
+                <p>تواصل مع البائعين مباشرة داخل التطبيق بأمان كامل، مع نظام حماية وتوثيق متطور عبر البريد الإلكتروني وخيارات الحظر والكتم الافتراضية.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+                <h3>تنبيهات مخصصة واشتراكات</h3>
+                <p>اشترك بفئاتك المفضلة أو تابع بائعين محددين لتصلك إشعارات فورية على هاتفك لحظة نشر أي إعلان جديد ومهم.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <h3>شحن ألعاب وتطبيقات</h3>
+                <p>قسم خاص وحصري لتلبية خدمات شحن العناوين الرقمية والألعاب والتطبيقات بسرعة وموثوقية تامة.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="channels">
+        <div class="channels-container">
+            <h2 class="section-title">تابع حساباتنا الرسمية</h2>
+            <p>انضم إلى مجتمعنا على وسائل التواصل الاجتماعي لتصلك آخر التحديثات، العروض، وأخبار سوق صافيتا أولاً بأول.</p>
+            
+            <div class="social-buttons">
+                <a href="https://whatsapp.com/channel/0029Vb8AJxdGk1Fz60JMiw3o" target="_blank" class="social-btn whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>قناة الواتساب</span>
+                </a>
+                <a href="https://www.facebook.com/share/1LcQSXoiKU/" target="_blank" class="social-btn facebook-btn">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span>فيسبوك</span>
+                </a>
+                <a href="https://www.instagram.com/sooqsafita?igsh=MTAzbG1qb2lteWM1aQ==" target="_blank" class="social-btn instagram-btn">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>انستغرام</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 <span>Skaper Tech</span>. تم التطوير بكل حب لخدمة أهالينا.</p>
+    </footer>
+
+</body>
+</html>
